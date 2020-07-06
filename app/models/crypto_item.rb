@@ -1,0 +1,2 @@
+class CryptoItem < ApplicationRecord
+end

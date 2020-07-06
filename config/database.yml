@@ -23,7 +23,12 @@ default: &default
 
 development:
   <<: *default
-  database: back_crypto_development
+  database: cryptodb
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: helekriisa
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +62,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: back_crypto_test
+  adapter: postgresql
+  encoding: unicode
+  database: cryptodb
+  pool: 5
+  username: postgres
+  password: helekriisa
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +90,6 @@ test:
 #
 production:
   <<: *default
-  database: back_crypto_production
-  username: back_crypto
+  database: cryptodb
+  username: posgres
   password: <%= ENV['BACK_CRYPTO_DATABASE_PASSWORD'] %>
