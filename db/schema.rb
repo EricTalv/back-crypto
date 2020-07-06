@@ -23,14 +23,4 @@ ActiveRecord::Schema.define(version: 2020_07_06_180850) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
-  create_table "my_crypto_items", force: :cascade do |t|
-    t.text "crypto_currency"
-    t.integer "amount"
-    t.text "date_of_purchase"
-    t.text "wallet_location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
 end
