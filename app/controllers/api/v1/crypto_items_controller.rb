@@ -20,9 +20,9 @@ module Api
         @crypto_item = CryptoItem.new(crypto_item_params)
 
         if @crypto_item.save
-          render json: @crypto_item, status: :created, location: @crypto_item
+          render json: @crypto_item, status: :ok
         else
-          render json: @crypto_item.errors, status: :unprocessable_entity
+          render json: @crypto_item.errors, status: :unprocessable_entity 
         end
       end
 
